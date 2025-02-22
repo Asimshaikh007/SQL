@@ -1,0 +1,42 @@
+show databases; -- displayes databases present
+
+create database accenture;-- creates database
+
+use accenture;-- makes the database ready for sql operation
+
+show tables;-- displayes all tables in database
+
+-- create
+create table employees(id int primary key,name varchar(100),dept varchar(100),salary decimal(10,2));-- creates a table with described format
+show tables;
+
+-- insert
+insert into employees(id,name,dept,salary) values(101,"Om","CEO",4500000.00);
+insert into employees(id,name,dept,salary) values(102,"Rutik","Manager",4500000.00);
+insert into employees(id,name,dept,salary) values(103,"Vishwas","HR",100000.00);
+insert into employees(id,name,dept,salary) values(104,"Abhishek","Web Devloper",45000.00);
+insert into employees(id,name,dept,salary) values(105,"Asim","Data Analytics",55000.00);
+insert into employees(id,name,dept,salary) values(106,"Om","Web Devloper",45000.00);
+insert into employees(id,name,dept,salary) values(107,"Rushikesh","Web Devloper",45000.00);
+insert into employees(id,name,dept,salary) values(108,"Suraj","Web Devloper",40000.00);
+insert into employees(id,name,dept,salary) values(109,"Pratik","Web Devloper",40000.00);
+insert into employees(id,name,dept,salary) values(110,"Sanchit","Testing",30000.00);
+select * from employees;
+
+-- update 
+update employees set salary = 65000.00 where name="Asim";
+select * from employees where name = "Asim";
+
+
+-- delete 
+delete from employees where id=9;
+select * from employees ;
+
+-- alter
+alter table employees add column email varchar(100);
+select * from employees ;
+ 
+alter table employees drop column email ;
+select * from employees ;
+
+alter table employees modify column salary float;
